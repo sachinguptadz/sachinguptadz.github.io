@@ -789,6 +789,37 @@ background:linear-gradient(
 #dbeafe
 );
 }
+    .project-links{
+display:flex;
+gap:12px;
+margin-top:15px;
+}
+
+.project-icon{
+width:36px;
+height:36px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#f1f5ff;
+border-radius:10px;
+transition:0.25s;
+}
+
+.project-icon img{
+width:18px;
+}
+
+.project-icon:hover{
+transform:translateY(-3px);
+background:#dbeafe;
+}
+
+.project-domain{
+font-weight:600;
+color:#2563eb;
+margin:6px 0 10px 0;
+}
 
     @media (max-width: 980px) {
       .hero-grid,
@@ -1227,26 +1258,110 @@ Optimized mobile applications for performance, scalability, and reliability.
 <div class="kicker">Portfolio</div>
 <h2>Projects</h2>
 </div>
+
+<p class="section-desc">
+A selection of mobile apps and platforms I have developed across multiple domains including blockchain,
+finance, devotional platforms, agriculture technology, and business solutions.
+</p>
+
 </div>
 
 <div class="projects">
 
-<div class="card project">
-<span class="project-tag">Flutter</span>
-<h3>Mobile App</h3>
-<p>Cross-platform mobile app built using Flutter.</p>
-</div>
+<!-- PROJECT 1 -->
 
 <div class="card project">
-<span class="project-tag">Android</span>
-<h3>Android Application</h3>
-<p>Native Android application built using Kotlin.</p>
+
+<span class="project-tag">Flutter • Web3</span>
+
+<h3>Sanatan Vision</h3>
+
+<p class="project-domain">
+Domain: Spirituality & Bhakti Platform
+</p>
+
+<p>
+A devotional mobile application designed for spiritual engagement,
+community participation, and religious content access.
+Built with Flutter and integrated with scalable backend APIs.
+</p>
+
+<div class="project-links">
+
+<a href="PLAY_STORE_LINK" target="_blank" class="project-icon">
+<img src="icons/playstore.svg" alt="Play Store">
+</a>
+
+<a href="APP_STORE_LINK" target="_blank" class="project-icon">
+<img src="icons/appstore.svg" alt="App Store">
+</a>
+
+<a href="WEBSITE_LINK" target="_blank" class="project-icon">
+<img src="icons/website.svg" alt="Website">
+</a>
+
 </div>
 
+</div>
+
+<!-- PROJECT 2 -->
+
 <div class="card project">
-<span class="project-tag">UI</span>
-<h3>Modern UI Design</h3>
-<p>Elegant interface with animations and responsive layouts.</p>
+
+<span class="project-tag">Flutter • Blockchain</span>
+
+<h3>VaultVerse</h3>
+
+<p class="project-domain">
+Domain: Crypto Wallet / Web3
+</p>
+
+<p>
+A decentralized crypto wallet similar to MetaMask that supports
+multi-chain transactions (ETH & BSC), seed phrase generation,
+secure asset storage, and token swapping.
+</p>
+
+<div class="project-links">
+
+<a href="PLAY_STORE_LINK" target="_blank" class="project-icon">
+<img src="icons/playstore.svg">
+</a>
+
+<a href="WEBSITE_LINK" target="_blank" class="project-icon">
+<img src="icons/website.svg">
+</a>
+
+</div>
+
+</div>
+
+<!-- PROJECT 3 -->
+
+<div class="card project">
+
+<span class="project-tag">Flutter • Finance</span>
+
+<h3>Ram Ram Bank</h3>
+
+<p class="project-domain">
+Domain: Devotional / Spiritual Banking
+</p>
+
+<p>
+A unique devotional application where users chant Ram Nam through
+tapping and typing interactions while tracking mala counts and
+rewarding top participants.
+</p>
+
+<div class="project-links">
+
+<a href="PLAY_STORE_LINK" target="_blank" class="project-icon">
+<img src="icons/playstore.svg">
+</a>
+
+</div>
+
 </div>
 
 </div>
