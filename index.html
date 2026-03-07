@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,19 +12,69 @@
   <meta property="og:image" content="https://sachinguptadz.github.io/preview.png">
   <meta property="og:url" content="https://sachinguptadz.github.io">
 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sachin Gupta | Flutter & Android Developer">
+  <meta name="twitter:description"
+    content="Mobile App Developer specializing in Flutter, Android, Web3 and scalable mobile products.">
+  <meta name="twitter:image" content="https://sachinguptadz.github.io/preview.png">
+
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
-  <meta
-    name="description"
-    content="Sachin Gupta - Flutter & Android Developer portfolio"
-  />
+  <link rel="shortcut icon" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <meta name="description" content="Sachin Gupta - Flutter & Android Developer portfolio" />
+
+
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta name="author" content="Sachin Gupta">
+  <meta name="keywords" content="
+Sachin Gupta,
+Flutter Developer,
+Android Developer,
+Mobile App Developer,
+Cross Platform App Developer,
+Native Android Developer,
+Flutter Engineer,
+Android Engineer,
+Mobile App Architect,
+Backend API Developer,
+REST API Developer,
+Web3 Developer,
+Blockchain Developer,
+Crypto Wallet Developer,
+Fintech App Developer,
+Ecommerce App Developer,
+Logistics App Developer,
+Real Estate App Developer,
+GIS App Developer,
+Devotional App Developer,
+Startup App Developer,
+Mobile UI UX Developer,
+Full Stack Mobile Developer,
+Freelance Mobile App Developer India,
+Flutter Android Developer India
+">
+
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Person",
+ "name": "Sachin Gupta",
+ "jobTitle": "Flutter & Android Developer",
+ "url": "https://sachinguptadz.github.io",
+ "sameAs": [
+   "https://github.com/sachinguptadz",
+   "https://www.linkedin.com/in/sachindzz/"
+ ]
+}
+</script>
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -117,8 +168,15 @@
     }
 
     @keyframes floatBlob {
-      0%, 100% { transform: translateY(0) translateX(0) scale(1); }
-      50% { transform: translateY(-18px) translateX(14px) scale(1.06); }
+
+      0%,
+      100% {
+        transform: translateY(0) translateX(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-18px) translateX(14px) scale(1.06);
+      }
     }
 
     .nav-wrap {
@@ -274,7 +332,9 @@
     }
 
     @keyframes blink {
-      50% { opacity: 0; }
+      50% {
+        opacity: 0;
+      }
     }
 
     .hero-actions {
@@ -520,17 +580,12 @@
       gap: 18px;
     }
 
-    .stack-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
 
-    .stack-wrap h3{
-      margin-top:25px;
-      margin-bottom:10px;
-      color:#2563eb;
-       fot-size:18px;
+    .stack-wrap h3 {
+      margin-top: 25px;
+      margin-bottom: 10px;
+      color: #2563eb;
+      font-size: 18px;
     }
 
     .stack-chip {
@@ -584,6 +639,7 @@
       background: rgba(255, 255, 255, 0.78);
       border: 1px solid rgba(15, 23, 42, 0.06);
       border-radius: 22px;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
       padding: 22px;
     }
 
@@ -594,6 +650,24 @@
       gap: 12px;
       flex-wrap: wrap;
       margin-bottom: 8px;
+    }
+
+    .timeline-card:first-child {
+      border: 2px solid rgba(37, 99, 235, 0.15);
+    }
+
+
+
+    .timeline-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+    }
+
+    .timeline::before {
+      background: linear-gradient(180deg,
+          #2563eb 0%,
+          #7c3aed 50%,
+          #06b6d4 100%);
     }
 
     .time {
@@ -615,6 +689,12 @@
       position: relative;
       overflow: hidden;
       min-height: 260px;
+      transition: all .35s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-10px) scale(1.01);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
     }
 
     .project::before {
@@ -622,8 +702,8 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0)),
-        radial-gradient(circle at top right, rgba(124,58,237,0.12), transparent 35%);
+        linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)),
+        radial-gradient(circle at top right, rgba(124, 58, 237, 0.12), transparent 35%);
       pointer-events: none;
     }
 
@@ -663,11 +743,11 @@
       border-radius: 999px;
       top: -70px;
       right: -60px;
-      background: rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.12);
     }
 
     .cta p {
-      color: rgba(255,255,255,0.88);
+      color: rgba(255, 255, 255, 0.88);
       max-width: 700px;
       line-height: 1.8;
     }
@@ -690,142 +770,203 @@
       transform: translateY(0) scale(1);
     }
 
-    .tech-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-margin-top:40px;
-}
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
 
-.tech-card{
-background: rgba(255,255,255,0.6);
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
+    .tech-card {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
 
-border-radius:20px;
-padding:25px;
+      border-radius: 20px;
+      padding: 25px;
 
-border:1px solid rgba(255,255,255,0.6);
+      border: 1px solid rgba(255, 255, 255, 0.6);
 
-box-shadow:
-0 10px 30px rgba(0,0,0,0.08),
-inset 0 1px 0 rgba(255,255,255,0.7);
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
 
-position:relative;
-overflow:hidden;
+      position: relative;
+      overflow: hidden;
 
-transition: all 0.35s ease;
-}
+      transition: all 0.35s ease;
+    }
 
-    .tech-card::before{
-content:"";
-position:absolute;
-top:0;
-left:-100%;
-width:120%;
-height:100%;
+    .tech-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 120%;
+      height: 100%;
 
-background:linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,0.7),
-transparent
-);
+      background: linear-gradient(120deg,
+          transparent,
+          rgba(255, 255, 255, 0.7),
+          transparent);
 
-transition: all 0.6s ease;
-}
+      transition: all 0.6s ease;
+    }
 
-    .tech-card:hover::before{
-left:100%;
-}
+    .tech-card:hover::before {
+      left: 100%;
+    }
 
-.tech-card:hover{
-transform: translateY(-8px);
-box-shadow:
-0 20px 50px rgba(0,0,0,0.12),
-inset 0 1px 0 rgba(255,255,255,0.8);
-}
+    .tech-card:hover {
+      transform: translateY(-8px);
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
 
-.tech-card h3{
-margin-bottom:15px;
-color:#2563eb;
-font-size:18px;
-}
+    .tech-card h3 {
+      margin-bottom: 15px;
+      color: #2563eb;
+      font-size: 18px;
+    }
 
-.stack-wrap{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
+    .stack-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-.stack-chip{
-background:linear-gradient(
-145deg,
-rgba(255,255,255,0.8),
-rgba(220,235,255,0.7)
-);
+    .stack-chip {
+      background: linear-gradient(145deg,
+          rgba(255, 255, 255, 0.8),
+          rgba(220, 235, 255, 0.7));
 
-border:1px solid rgba(255,255,255,0.8);
+      border: 1px solid rgba(255, 255, 255, 0.8);
 
-color:#1e40af;
+      color: #1e40af;
 
-padding:8px 14px;
-border-radius:12px;
+      padding: 8px 14px;
+      border-radius: 12px;
 
-font-size:14px;
-font-weight:500;
+      font-size: 14px;
+      font-weight: 500;
 
-box-shadow:
-0 3px 8px rgba(0,0,0,0.05);
+      box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.05);
 
-transition: all 0.25s ease;
-}
+      transition: all 0.25s ease;
+    }
 
-.stack-chip:hover{
-transform: translateY(-2px);
-background:linear-gradient(
-145deg,
-#e6f0ff,
-#dbeafe
-);
-}
-.project-links{
-display:flex;
-gap:14px;
-margin-top:18px;
-}
+    .stack-chip:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(145deg,
+          #e6f0ff,
+          #dbeafe);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 14px;
+      margin-top: 18px;
+    }
 
 
-.project-icon{
-width:42px;
-height:42px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#f1f5ff;
-border-radius:12px;
-transition:0.25s;
-}
+    .project-icon {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f5ff;
+      border-radius: 12px;
+      transition: 0.25s;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
 
-.project-icon img{
-width:22px;
-height:22px;
-filter:invert(34%) sepia(79%) saturate(1904%) hue-rotate(203deg) brightness(97%) contrast(95%);
-}
+    .project-icon img {
+      width: 22px;
+      height: 22px;
+    }
 
 
-.project-icon:hover{
-transform:translateY(-4px);
-background:#e0ebff;
-}
+    .project-icon:hover {
+      transform: translateY(-4px);
+      background: #e0ebff;
+    }
 
-.project-domain{
-font-weight:600;
-color:#2563eb;
-margin:6px 0 10px 0;
-}
+    .project-domain {
+      font-weight: 600;
+      color: #2563eb;
+      margin: 6px 0 10px 0;
+    }
+
+    /* HAMBURGER */
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+
+    }
+
+    .menu-toggle span {
+      width: 26px;
+      height: 3px;
+      background: #0f172a;
+      border-radius: 3px;
+      transition: .3s;
+    }
+
+    /* MOBILE NAV */
+
+    @media (max-width: 768px) {
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+
+        position: absolute;
+
+        top: 78px;
+
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        background: rgba(248, 251, 255, 0.95);
+
+        backdrop-filter: blur(20px);
+
+        padding: 20px;
+
+        gap: 10px;
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+        transform: translateY(-120%);
+
+        transition: 0.35s ease;
+
+      }
+
+      .nav-links a {
+        padding: 12px 16px;
+        font-size: 1rem;
+      }
+
+      .nav-links.active {
+        transform: translateY(0);
+      }
+
+    }
 
     @media (max-width: 980px) {
+
       .hero-grid,
       .highlight-grid,
       .cards-3,
@@ -845,10 +986,10 @@ margin:6px 0 10px 0;
 
     @media (max-width: 720px) {
       nav {
-        height: auto;
-        padding: 14px 0;
-        align-items: flex-start;
-        flex-direction: column;
+        height: 70px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
       }
 
       .nav-links {
@@ -876,8 +1017,235 @@ margin:6px 0 10px 0;
         padding: 32px 0;
       }
     }
+
+
+    /* NAVBAR LAYOUT */
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    /* MOBILE DRAWER */
+
+    .mobile-drawer {
+
+      position: fixed;
+      top: 0;
+      left: -300px;
+
+      width: 300px;
+      height: 100%;
+
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(25px);
+
+      border-right: 1px solid rgba(0, 0, 0, 0.06);
+
+      padding: 30px 20px;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 14px;
+
+      transition: left 0.35s cubic-bezier(.4, .2, .2, 1);
+
+      z-index: 999;
+
+      box-shadow: 20px 0 60px rgba(0, 0, 0, 0.15);
+
+    }
+
+    .mobile-drawer a {
+
+      font-weight: 600;
+
+      padding: 12px;
+
+      border-radius: 10px;
+
+    }
+
+    .mobile-drawer a:hover {
+      background: #eef4ff;
+    }
+
+    /* DRAWER OPEN */
+
+    .mobile-drawer.open {
+      left: 0;
+    }
+
+    .drawer-header {
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+    }
+
+    .drawer-avatar {
+
+      width: 52px;
+      height: 52px;
+
+      border-radius: 14px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-weight: 800;
+      font-size: 18px;
+
+      color: white;
+
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+
+      margin-bottom: 10px;
+
+    }
+
+    .drawer-name {
+
+      font-weight: 700;
+      font-size: 18px;
+
+    }
+
+    .drawer-role {
+
+      font-size: 13px;
+      color: #64748b;
+
+    }
+
+    /* OVERLAY */
+
+    .drawer-overlay {
+
+      position: fixed;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: rgba(15, 23, 42, 0.35);
+
+      backdrop-filter: blur(2px);
+
+      opacity: 0;
+      visibility: hidden;
+
+      transition: .3s;
+
+      z-index: 998;
+
+    }
+
+    .drawer-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .drawer-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .drawer-menu a {
+
+      display: flex;
+      align-items: center;
+
+      font-weight: 600;
+
+      padding: 12px 14px;
+
+      border-radius: 12px;
+
+      transition: all .25s;
+
+      color: #0f172a;
+
+    }
+
+    .drawer-menu a:hover {
+
+      background: rgba(37, 99, 235, 0.08);
+
+      transform: translateX(4px);
+
+      color: #2563eb;
+
+    }
+
+    .drawer-menu a.active {
+
+      background: rgba(37, 99, 235, 0.12);
+
+      color: #2563eb;
+
+      font-weight: 700;
+
+    }
+
+    .nav-links a.active {
+
+      color: #2563eb;
+
+      background: rgba(37, 99, 235, 0.12);
+
+    }
+
+
+    @media(max-width:768px) {
+
+      .hero {
+        padding: 40px 0 20px;
+      }
+
+      .hero-card {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+    }
+
+    /* MOBILE STYLE */
+
+    @media(max-width:768px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .brand-name {
+        display: none;
+      }
+
+    }
   </style>
 </head>
+
 <body>
   <div class="blur one"></div>
   <div class="blur two"></div>
@@ -885,23 +1253,70 @@ margin:6px 0 10px 0;
 
   <div class="nav-wrap">
     <div class="container">
-      <nav>
+      <nav class="navbar">
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- LOGO -->
+
         <a class="brand" href="#top">
           <span class="brand-badge">SG</span>
-          <span>Sachin Gupta</span>
+          <span class="brand-name">Sachin Gupta</span>
         </a>
 
-        <div class="nav-links">
+        <!-- DESKTOP NAV -->
+
+        <div class="nav-links" id="navLinks">
+          <a href="#top">Home</a>
           <a href="#about">About</a>
-          <a href="#strengths">Strengths</a>
-          <a href="#focus">Focus</a>
-          <a href="#journey">Journey</a>
-          <a href="#projects">Portfolio</a>
+          <a href="#skills">Skills</a>
+          <a href="#services">Services</a>
+          <a href="#industries">Industries</a>
+          <a href="#journey">Experience</a>
+          <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
+
       </nav>
     </div>
   </div>
+
+  <!-- MOBILE DRAWER -->
+
+  <div class="mobile-drawer" id="mobileDrawer">
+
+    <div class="drawer-header">
+
+      <div class="drawer-avatar">SG</div>
+
+      <div class="drawer-name">Sachin Gupta</div>
+
+      <div class="drawer-role">Flutter & Android Developer</div>
+
+    </div>
+
+    <div class="drawer-menu">
+
+      <a href="#top">🏠 Home</a>
+      <a href="#about">👤 About</a>
+      <a href="#skills">⚙️ Skills</a>
+      <a href="#services">🛠 Services</a>
+      <a href="#industries">🏭 Industries</a>
+      <a href="#journey">💼 Experience</a>
+      <a href="#projects">🚀 Projects</a>
+      <a href="#contact">📩 Contact</a>
+
+    </div>
+
+  </div>
+
+  <div class="drawer-overlay" id="drawerOverlay"></div>
 
   <main id="top">
     <section class="hero">
@@ -921,29 +1336,42 @@ margin:6px 0 10px 0;
           </div>
 
           <p class="hero-sub">
-            I design portfolio-worthy mobile product experiences with a clean,
-            modern visual language, thoughtful interactions, and a strong focus
-            on clarity, usability, and impact.
+            Flutter and Native Android developer with 4+ years of experience building scalable mobile applications
+            across fintech, Web3, logistics, real estate, and enterprise platforms, delivering high-performance products
+            from architecture to production deployment.
           </p>
 
           <div class="hero-actions">
+
             <a class="btn btn-primary" href="#contact">Let’s Connect</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/sachindzz/" target="_blank" rel="noreferrer">View LinkedIn</a>
+
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/sachindzz/" target="_blank" rel="noreferrer">
+              View LinkedIn
+            </a>
+
+            <a class="btn btn-secondary" href="Sachin-Gupta-Resume.pdf" download>
+              📄 Download Resume
+            </a>
+
           </div>
 
           <div class="mini-grid">
-            <div class="mini-card">
-              <div class="mini-label">Identity</div>
-              <div class="mini-value">Sachin Gupta</div>
-            </div>
+
             <div class="mini-card">
               <div class="mini-label">Primary Role</div>
-              <div class="mini-value">Flutter & Android</div>
+              <div class="mini-value">Flutter & Android Developer</div>
             </div>
+
             <div class="mini-card">
-              <div class="mini-label">Focus</div>
-              <div class="mini-value">Mobile App Experiences</div>
+              <div class="mini-label">Specialization</div>
+              <div class="mini-value">Cross-Platform Mobile Apps</div>
             </div>
+
+            <div class="mini-card">
+              <div class="mini-label">Experience</div>
+              <div class="mini-value">4+ Years Industry Experience</div>
+            </div>
+
           </div>
         </div>
 
@@ -954,16 +1382,17 @@ margin:6px 0 10px 0;
               <div class="avatar">SG</div>
               <h3 style="margin:18px 0 8px; font-size:1.5rem;">Profile Snapshot</h3>
               <p style="color:var(--muted); line-height:1.8; margin:0;">
-                A refined personal portfolio with a bright premium theme,
-                smooth reveal animations, elegant cards, and a structure ready
-                for deeper career details whenever you want to add them.
+                Mobile engineer specializing in Flutter and Android development with experience building
+                production-grade applications across fintech, Web3, logistics, GIS, and enterprise platforms. Focused on
+                performance, scalability, and clean architecture.
               </p>
             </div>
 
             <div class="pill-row">
-              <span class="pill">Light Theme</span>
-              <span class="pill">Animated UI</span>
-              <span class="pill">Responsive</span>
+              <span class="pill">4+ Years Experience</span>
+              <span class="pill">25+ Apps Delivered</span>
+              <span class="pill">Team Lead</span>
+              <span class="pill">Multi-Domain Products</span>
             </div>
           </div>
 
@@ -979,7 +1408,7 @@ margin:6px 0 10px 0;
                 <span>Email</span>
                 <strong>Send message ↗</strong>
               </a>
-             <!-- CONTINUE FROM YOUR CODE ABOVE -->
+              <!-- CONTINUE FROM YOUR CODE ABOVE -->
 
               <a class="social-link" href="https://www.linkedin.com/in/sachindzz/" target="_blank">
                 <span>LinkedIn</span>
@@ -997,513 +1426,849 @@ margin:6px 0 10px 0;
       </div>
     </section>
 
-<!-- ABOUT -->
-
-<section id="about" class="section">
-<div class="container">
-
-<div class="section-head">
-<div>
-<div class="kicker">About</div>
-<h2>Who I Am</h2>
-</div>
-
-<p class="section-desc">
-Flutter & Android developer focused on building high-quality
-mobile applications with elegant UI, strong performance,
-and scalable architecture.
-</p>
-
-</div>
-
-<div class="cards-3">
-
-<div class="card">
-<div class="icon-box">📱</div>
-<h3>Mobile Development</h3>
-<p>Building high performance mobile apps with Flutter and Android.</p>
-</div>
-
-<div class="card">
-<div class="icon-box">🎨</div>
-<h3>UI/UX Design</h3>
-<p>Designing modern interfaces with smooth interactions and responsive layouts.</p>
-</div>
-
-<div class="card">
-<div class="icon-box">⚡</div>
-<h3>Performance</h3>
-<p>Creating scalable and optimized apps focused on user experience.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills" class="section">
-<div class="container">
-
-<div class="section-head">
-<div>
-<div class="kicker">Skills</div>
-<h2>Technology Stack</h2>
-</div>
-</div>
-
-<div class="tech-grid">
-
-<!-- Mobile -->
-<div class="tech-card">
-<h3>Mobile Development</h3>
-<div class="stack-wrap">
-<span class="stack-chip">Flutter</span>
-<span class="stack-chip">Dart</span>
-<span class="stack-chip">Android</span>
-<span class="stack-chip">Kotlin</span>
-<span class="stack-chip">Java</span>
-<span class="stack-chip">Jetpack Compose</span>
-<span class="stack-chip">XML UI</span>
-</div>
-</div>
-
-<!-- Backend -->
-<div class="tech-card">
-<h3>Backend & API</h3>
-<div class="stack-wrap">
-<span class="stack-chip">REST APIs</span>
-<span class="stack-chip">API Development</span>
-<span class="stack-chip">Node.js</span>
-<span class="stack-chip">Express.js</span>
-<span class="stack-chip">PHP</span>
-</div>
-</div>
-
-<!-- Database -->
-<div class="tech-card">
-<h3>Database</h3>
-<div class="stack-wrap">
-<span class="stack-chip">Firebase</span>
-<span class="stack-chip">MongoDB</span>
-<span class="stack-chip">SQL</span>
-</div>
-</div>
-
-<!-- Integrations -->
-<div class="tech-card">
-<h3>Integrations</h3>
-<div class="stack-wrap">
-<span class="stack-chip">Payment Gateways</span>
-<span class="stack-chip">Web3 Wallet</span>
-<span class="stack-chip">Push Notifications</span>
-<span class="stack-chip">Location Tracking</span>
-<span class="stack-chip">Socket.IO</span>
-</div>
-</div>
-
-<!-- Architecture -->
-<div class="tech-card">
-<h3>Architecture</h3>
-<div class="stack-wrap">
-<span class="stack-chip">Clean Architecture</span>
-<span class="stack-chip">Bloc</span>
-<span class="stack-chip">Provider</span>
-<span class="stack-chip">GetX</span>
-</div>
-</div>
-
-<!-- Deployment -->
-<div class="tech-card">
-<h3>Deployment</h3>
-<div class="stack-wrap">
-<span class="stack-chip">Google Play Console</span>
-<span class="stack-chip">Apple App Store</span>
-</div>
-</div>
-
-<!-- Web -->
-<div class="tech-card">
-<h3>Web Development</h3>
-<div class="stack-wrap">
-<span class="stack-chip">Website Development</span>
-<span class="stack-chip">HTML</span>
-<span class="stack-chip">CSS</span>
-<span class="stack-chip">JavaScript</span>
-</div>
-</div>
-
-<!-- Tools -->
-<div class="tech-card">
-<h3>Tools</h3>
-<div class="stack-wrap">
-<span class="stack-chip">Git</span>
-<span class="stack-chip">GitHub</span>
-<span class="stack-chip">GitHub Actions</span>
-<span class="stack-chip">Postman</span>
-<span class="stack-chip">Android Studio</span>
-<span class="stack-chip">VS Code</span>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- EXPERIENCE -->
-
-<section id="journey" class="section">
-<div class="container">
-
-<div class="section-head">
-<div>
-<div class="kicker">Experience</div>
-<h2>Professional Journey</h2>
-</div>
-
-
-</div>
-
-<div class="timeline">
-
-<!-- CURRENT ROLE -->
-
-<div class="timeline-item">
-<div class="timeline-card">
-
-<div class="timeline-top">
-<strong>Android & Flutter Developer</strong>
-<span class="time">Dec 2022 — Present</span>
-</div>
+    <!-- ABOUT -->
+
+    <section id="about" class="section">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <div class="kicker">About</div>
+            <h2>Engineer Behind the Products</h2>
+          </div>
+        </div>
+
+        <div class="highlight-grid">
+
+          <!-- LEFT CARD -->
+
+          <div class="card">
+
+            <h3>Mobile, Web & Backend Engineer Building Scalable Digital Products</h3>
+
+            <p>
+              I'm Sachin Gupta, a software engineer with 4+ years of experience
+              building scalable mobile applications and digital platforms across
+              multiple industries including fintech, logistics, GIS systems,
+              real estate platforms, devotional apps, and enterprise solutions.
+            </p>
+
+            <p>
+              My work focuses on transforming ideas into production-ready products —
+              designing system architecture, building mobile and web applications,
+              developing backend APIs, and delivering reliable solutions that are
+              fast, secure, and user-friendly.
+            </p>
+
+            <p>
+              I work across the complete development lifecycle, from product planning
+              and architecture design to implementation, deployment, and long-term
+              maintenance.
+            </p>
+
+          </div>
+
+          <!-- RIGHT CARD -->
+
+          <div class="card">
+
+            <h3>Core Expertise</h3>
+
+            <ul>
+              <li>Cross-platform mobile apps using Flutter for Android & iOS</li>
+              <li>Native Android development using Kotlin and Java</li>
+              <li>Backend API development using Node.js and PHP</li>
+              <li>Website and web platform development</li>
+              <li>Third-party integrations including payments, maps, and notifications</li>
+              <li>Offline-first mobile applications using SQLite, Room, and Hive</li>
+              <li>Scalable architecture using MVVM and Clean Architecture</li>
+              <li>Google Play Store & Apple App Store deployment</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills" class="section">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <div class="kicker">Skills</div>
+            <h2>Technology Stack</h2>
+          </div>
+        </div>
+
+        <div class="tech-grid">
+
+          <!-- Mobile -->
+          <div class="tech-card">
+            <h3>Mobile Development</h3>
+            <div class="stack-wrap">
+              <span class="stack-chip">Flutter</span>
+              <span class="stack-chip">Dart</span>
+              <span class="stack-chip">Android</span>
+              <span class="stack-chip">Kotlin</span>
+              <span class="stack-chip">Java</span>
+              <span class="stack-chip">Jetpack Compose</span>
+              <span class="stack-chip">XML UI</span>
+            </div>
+          </div>
+
+          <!-- State Management -->
+          <div class="tech-card">
+            <h3>State Management</h3>
+            <div class="stack-wrap">
+              <span class="stack-chip">Bloc</span>
+              <span class="stack-chip">Provider</span>
+              <span class="stack-chip">GetX</span>
+              <span class="stack-chip">Riverpod</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="tech-card">
+            <h3>Backend & APIs</h3>
+            <div class="stack-wrap">
+              <span class="stack-chip">Node.js</span>
+              <span class="stack-chip">Express.js</span>
+              <span class="stack-chip">PHP</span>
+              <span class="stack-chip">REST APIs</span>
+              <span class="stack-chip">API Integration</span>
+              <span class="stack-chip">Authentication (JWT)</span>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="tech-card">
+            <h3>Database</h3>
+            <div class="stack-wrap">
+              <span class="stack-chip">Firebase</span>
+              <span class="stack-chip">MongoDB</span>
+              <span class="stack-chip">SQL</span>
+              <span class="stack-chip">SQLite</span>
+              <span class="stack-chip">Hive</span>
+              <span class="stack-chip">Room</span>
+            </div>
+          </div>
+
+          <!-- Integrations -->
+          <div class="tech-card">
+            <h3>Integrations</h3>
+            <div class="stack-wrap">
+              <span class="stack-chip">Payment Gateways</span>
+              <span class="stack-chip">Push Notifications</span>
+              <span class="stack-chip">Location Tracking</span>
+              <span class="stack-chip">Maps Integration</span>
+              <span class="stack-chip">Socket.IO</span>
+            </div>
+          </div>
+
+          <!-- Architecture -->
+          <div class="tech-card">
+            <h3>Architecture</h3>
+            <div class="stack-wrap">
+              <span class="stack-chip">Clean Architecture</span>
+              <span class="stack-chip">MVVM</span>
+              <span class="stack-chip">MVC</span>
+              <span class="stack-chip">Modular Architecture</span>
+            </div>
+          </div>
+
+          <!-- Deployment -->
+          <div class="tech-card">
+            <h3>Deployment</h3>
+            <div class="stack-wrap">
+              <span class="stack-chip">Google Play Console</span>
+              <span class="stack-chip">Apple App Store</span>
+              <span class="stack-chip">CI/CD</span>
+              <span class="stack-chip">Version Management</span>
+            </div>
+          </div>
+
+          <!-- Web -->
+          <div class="tech-card">
+            <h3>Web Development</h3>
+            <div class="stack-wrap">
+              <span class="stack-chip">HTML5</span>
+              <span class="stack-chip">CSS3</span>
+              <span class="stack-chip">JavaScript</span>
+              <span class="stack-chip">Responsive Design</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="tech-card">
+            <h3>Tools</h3>
+            <div class="stack-wrap">
+              <span class="stack-chip">Git</span>
+              <span class="stack-chip">GitHub</span>
+              <span class="stack-chip">Postman</span>
+              <span class="stack-chip">Android Studio</span>
+              <span class="stack-chip">VS Code</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- SERVICES -->
+
+    <section id="services" class="section">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <div class="kicker">Services</div>
+            <h2>Solutions I Build</h2>
+          </div>
+        </div>
+
+        <div class="cards-3">
+
+          <!-- CROSS PLATFORM -->
+
+          <div class="card">
+            <div class="icon-box">📱</div>
+            <h3>Cross-Platform App Development</h3>
+            <p>
+              Development of scalable mobile applications using Flutter for both
+              Android and iOS platforms with a single codebase, modern UI,
+              smooth performance, and maintainable architecture.
+            </p>
+          </div>
+
+          <!-- NATIVE -->
+
+          <div class="card">
+            <div class="icon-box">🤖</div>
+            <h3>Native Mobile App Development</h3>
+            <p>
+              Fully native mobile applications built using Kotlin and Java
+              for Android and Swift-based solutions for iOS, ensuring maximum
+              performance, stability, and platform-specific capabilities.
+            </p>
+          </div>
+
+          <!-- BACKEND -->
+
+          <div class="card">
+            <div class="icon-box">⚙️</div>
+            <h3>Backend & API Development</h3>
+            <p>
+              Development of secure and scalable backend systems including
+              REST APIs, authentication systems, database architecture,
+              and real-time services using Node.js and PHP.
+            </p>
+          </div>
+
+          <!-- WEBSITE -->
+
+          <div class="card">
+            <div class="icon-box">🌐</div>
+            <h3>Website & Web Platform Development</h3>
+            <p>
+              Development of responsive modern websites and web dashboards
+              using HTML, CSS, and JavaScript with optimized performance,
+              clean UI design, and scalable structure.
+            </p>
+          </div>
+
+          <!-- INTEGRATIONS -->
+
+          <div class="card">
+            <div class="icon-box">🔌</div>
+            <h3>Third-Party Integrations</h3>
+            <p>
+              Integration of advanced features including payment gateways,
+              push notifications, maps & GPS tracking, real-time sockets,
+              analytics tools, and social authentication systems.
+            </p>
+          </div>
+
+          <!-- DEPLOYMENT -->
+
+          <div class="card">
+            <div class="icon-box">🚀</div>
+            <h3>App Store & Play Store Deployment</h3>
+            <p>
+              Complete mobile app deployment including Google Play Console
+              and Apple App Store publishing, version updates,
+              release management, and store optimization.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- INDUSTRIES -->
+
+    <section id="industries" class="section">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <div class="kicker">Industry Experience</div>
+            <h2>Industries I've Built Products For</h2>
+          </div>
+        </div>
+
+        <div class="cards-3">
+
+          <div class="card">
+            <div class="icon-box">💳</div>
+            <h3>Fintech & Banking</h3>
+            <p>Loan platforms, digital banking apps, financial transactions, and secure payment integrations.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon-box">🔗</div>
+            <h3>Web3 & Blockchain</h3>
+            <p>Crypto wallets, staking platforms, blockchain integrations, and decentralized applications.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon-box">🏠</div>
+            <h3>Real Estate</h3>
+            <p>Property listing platforms, real estate marketplaces, and property management systems.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon-box">🚚</div>
+            <h3>Logistics & Tracking</h3>
+            <p>Fleet management, real-time GPS tracking systems, and delivery optimization platforms.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon-box">🛒</div>
+            <h3>E-commerce</h3>
+            <p>Shopping platforms, product catalogs, payment integrations, and scalable mobile commerce apps.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon-box">🗺️</div>
+            <h3>GIS & Mapping</h3>
+            <p>Location-based services, mapping solutions, spatial data analysis, and geolocation systems.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon-box">🙏</div>
+            <h3>Devotional Platforms</h3>
+            <p>Spiritual community apps, religious content platforms, and devotional engagement systems.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon-box">🎥</div>
+            <h3>Streaming & Communication</h3>
+            <p>Audio/video streaming apps, real-time communication systems, and social interaction platforms.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon-box">🏢</div>
+            <h3>Enterprise Solutions</h3>
+            <p>Office management systems, NGO platforms, and enterprise productivity applications.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- EXPERIENCE -->
+
+    <section id="journey" class="section">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <div class="kicker">Experience</div>
+            <h2>Professional Journey</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+
+          <!-- CURRENT ROLE -->
+
+          <div class="timeline-item">
+            <div class="timeline-card">
+
+              <div class="timeline-top">
+                <strong>Flutter & Android Developer | Team Lead</strong>
+                <span class="time">Dec 2022 — Present</span>
+              </div>
+
+              <h4>Dunitech Soft Solutions Pvt Ltd • Lucknow</h4>
+
+              <p class="muted-note">
+                Leading development of scalable mobile applications and digital
+                products across multiple domains including fintech, logistics,
+                GIS platforms, and enterprise systems.
+              </p>
+
+              <ul>
+
+                <li>
+                  Build cross-platform mobile applications using <b>Flutter (Dart)</b>
+                  and native Android applications using <b>Kotlin</b> and <b>Java</b>.
+                </li>
+
+                <li>
+                  Lead the mobile development team and manage the full product
+                  lifecycle from requirement analysis to production deployment.
+                </li>
+
+                <li>
+                  Design system architecture including database schema,
+                  backend APIs, and scalable application structure.
+                </li>
+
+                <li>
+                  Develop backend services and REST APIs using
+                  <b>Node.js</b> and <b>PHP</b>.
+                </li>
+
+                <li>
+                  Work directly with clients to convert product ideas into
+                  reliable and scalable software solutions.
+                </li>
+
+                <li>
+                  Deploy and maintain production applications on
+                  <b>Google Play Store</b> and <b>Apple App Store</b>.
+                </li>
+
+              </ul>
+
+              <div class="pill-row">
+                <span class="pill">Flutter</span>
+                <span class="pill">Android</span>
+                <span class="pill">Node.js</span>
+                <span class="pill">REST APIs</span>
+                <span class="pill">Architecture</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- PREVIOUS ROLE -->
+
+          <div class="timeline-item">
+            <div class="timeline-card">
+
+              <div class="timeline-top">
+                <strong>Android Developer</strong>
+                <span class="time">Apr 2022 — Dec 2022</span>
+              </div>
+
+              <h4>Technosys Services Pvt Ltd • Lucknow</h4>
+
+              <p class="muted-note">
+                Developed Android applications across multiple domains
+                including e-commerce platforms, government systems,
+                and real-time tracking applications.
+              </p>
+
+              <ul>
+
+                <li>
+                  Built Android applications using <b>Java</b> and <b>Kotlin</b>.
+                </li>
+
+                <li>
+                  Designed intuitive mobile interfaces focused on usability
+                  and smooth user experience.
+                </li>
+
+                <li>
+                  Integrated REST APIs, authentication systems,
+                  and real-time tracking features.
+                </li>
+
+                <li>
+                  Worked on multiple production applications and
+                  optimized performance for stability and scalability.
+                </li>
+
+              </ul>
+
+              <div class="pill-row">
+                <span class="pill">Android</span>
+                <span class="pill">Kotlin</span>
+                <span class="pill">Java</span>
+                <span class="pill">REST APIs</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects" class="section">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <div class="kicker">Portfolio</div>
+            <h2>Projects</h2>
+          </div>
+
+
+
+        </div>
+
+        <div class="projects">
+
+          <!-- PROJECT 1 -->
+
+          <div class="card project">
+
+            <span class="project-tag">Flutter • Web3</span>
+
+            <h3>Sanatan Vision</h3>
+
+            <p class="project-domain">
+              Domain: Spirituality & Bhakti Platform
+            </p>
+
+            <p>
+              A devotional mobile application designed for spiritual engagement,
+              community participation, and religious content access.
+              Built with Flutter and integrated with scalable backend APIs.
+            </p>
+
+            <div class="project-links">
+
+              <a href="PLAY_STORE_LINK" target="_blank" class="project-icon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleplay.svg" alt="Google Play">
+              </a>
+
+              <a href="APP_STORE_LINK" target="_blank" class="project-icon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg" alt="App Store">
+              </a>
+
+              <a href="WEBSITE_LINK" target="_blank" class="project-icon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlechrome.svg" alt="Website">
+              </a>
+
+            </div>
 
-<h4>Dunitech Soft Solutions Pvt Ltd • Lucknow</h4>
+          </div>
 
-<ul>
+          <!-- PROJECT 2 -->
 
-<li>
-Develop cross-platform mobile applications using <b>Flutter (Dart)</b> and native Android apps using <b>Kotlin & Java</b>.
-</li>
+          <div class="card project">
 
-<li>
-Lead the mobile development team and manage full project lifecycle from client idea to production deployment.
-</li>
+            <span class="project-tag">Flutter • Blockchain</span>
 
-<li>
-Design complete system architecture including database schema, APIs, and application structure.
-</li>
+            <h3>VaultVerse</h3>
 
-<li>
-Build backend services and REST APIs using <b>PHP Core</b> and <b>Node.js</b>.
-</li>
+            <p class="project-domain">
+              Domain: Crypto Wallet / Web3
+            </p>
 
-<li>
-Communicate directly with clients, gathering requirements and transforming them into scalable solutions.
-</li>
+            <p>
+              A decentralized crypto wallet similar to MetaMask that supports
+              multi-chain transactions (ETH & BSC), seed phrase generation,
+              secure asset storage, and token swapping.
+            </p>
 
-<li>
-Follow Agile methodology and ensure high performance, stability, and production quality apps.
-</li>
+            <div class="project-links">
 
-</ul>
+              <a href="PLAY_STORE_LINK" target="_blank" class="project-icon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleplay.svg" alt="Google Play">
+              </a>
 
-</div>
-</div>
+              <a href="APP_STORE_LINK" target="_blank" class="project-icon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg" alt="App Store">
+              </a>
 
-<!-- PREVIOUS ROLE -->
+              <a href="WEBSITE_LINK" target="_blank" class="project-icon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlechrome.svg" alt="Website">
+              </a>
 
-<div class="timeline-item">
-<div class="timeline-card">
+            </div>
 
-<div class="timeline-top">
-<strong>Android Developer</strong>
-<span class="time">Apr 2022 — Dec 2022</span>
-</div>
+          </div>
 
-<h4>Technosys Services Pvt Ltd • Lucknow</h4>
+          <!-- PROJECT 3 -->
 
-<ul>
+          <div class="card project">
 
-<li>
-Developed high-performance Android applications using <b>Java</b> and <b>Kotlin</b>.
-</li>
+            <span class="project-tag">Flutter • Finance</span>
 
-<li>
-Designed user-centric mobile interfaces focused on usability and intuitive experiences.
-</li>
+            <h3>Ram Ram Bank</h3>
 
-<li>
-Worked across multiple domains including <b>E-commerce, Government Systems, and Tracking Apps</b>.
-</li>
+            <p class="project-domain">
+              Domain: Devotional / Spiritual Banking
+            </p>
 
-<li>
-Integrated APIs, real-time tracking systems, and secure authentication mechanisms.
-</li>
+            <p>
+              A unique devotional application where users chant Ram Nam through
+              tapping and typing interactions while tracking mala counts and
+              rewarding top participants.
+            </p>
 
-<li>
-Optimized mobile applications for performance, scalability, and reliability.
-</li>
+            <div class="project-links">
 
-</ul>
+              <a href="PLAY_STORE_LINK" target="_blank" class="project-icon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleplay.svg" alt="Google Play">
+              </a>
 
-</div>
-</div>
+            </div>
 
-</div>
-</div>
-</section>
+          </div>
 
-<!-- PROJECTS -->
+        </div>
+      </div>
+    </section>
 
-<section id="projects" class="section">
-<div class="container">
+    <!-- GITHUB -->
 
-<div class="section-head">
-<div>
-<div class="kicker">Portfolio</div>
-<h2>Projects</h2>
-</div>
+    <section class="section">
+      <div class="container">
 
-<p class="section-desc">
-A selection of mobile apps and platforms I have developed across multiple domains including blockchain,
-finance, devotional platforms, agriculture technology, and business solutions.
-</p>
+        <div class="section-head">
+          <div>
+            <div class="kicker">Open Source</div>
+            <h2>GitHub Stats</h2>
+          </div>
+        </div>
 
-</div>
 
-<div class="projects">
 
-<!-- PROJECT 1 -->
+        <div style="text-align:center">
 
-<div class="card project">
+          <img height="170"
+            src="https://github-readme-stats-sigma-five.vercel.app/api?username=sachinguptadz&show_icons=true&hide_border=true&theme=default"
+            alt="GitHub Stats">
 
-<span class="project-tag">Flutter • Web3</span>
+          <br><br>
 
-<h3>Sanatan Vision</h3>
+          <img src="https://github-readme-activity-graph.vercel.app/graph?username=sachinguptadz&theme=github-light">
 
-<p class="project-domain">
-Domain: Spirituality & Bhakti Platform
-</p>
+        </div>
 
-<p>
-A devotional mobile application designed for spiritual engagement,
-community participation, and religious content access.
-Built with Flutter and integrated with scalable backend APIs.
-</p>
 
-<div class="project-links">
 
-<a href="PLAY_STORE_LINK" target="_blank" class="project-icon">
-<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleplay.svg" alt="Google Play">
-</a>
+      </div>
+    </section>
 
-<a href="APP_STORE_LINK" target="_blank" class="project-icon">
-<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg" alt="App Store">
-</a>
+    <!-- CONTACT -->
 
-<a href="WEBSITE_LINK" target="_blank" class="project-icon">
-<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlechrome.svg" alt="Website">
-</a>
+    <section id="contact" class="section">
+      <div class="container">
 
-</div>
+        <div class="cta">
 
-</div>
+          <h2>Let’s Build Something Impactful</h2>
 
-<!-- PROJECT 2 -->
+          <p>
+            I’m always open to collaborating on innovative mobile applications,
+            scalable backend systems, and high-performance digital products.
+            If you have an idea, project, or partnership opportunity,
+            let’s connect and create something meaningful.
+          </p>
 
-<div class="card project">
+          <div class="hero-actions">
 
-<span class="project-tag">Flutter • Blockchain</span>
+            <a class="btn btn-secondary" href="mailto:sachinguptadz@gmail.com">
+              📧 Email Me
+            </a>
 
-<h3>VaultVerse</h3>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/sachindzz/" target="_blank">
+              💼 LinkedIn
+            </a>
 
-<p class="project-domain">
-Domain: Crypto Wallet / Web3
-</p>
+            <a class="btn btn-secondary" href="https://github.com/sachinguptadz" target="_blank">
+              💻 GitHub
+            </a>
 
-<p>
-A decentralized crypto wallet similar to MetaMask that supports
-multi-chain transactions (ETH & BSC), seed phrase generation,
-secure asset storage, and token swapping.
-</p>
+          </div>
 
-<div class="project-links">
+        </div>
 
-<a href="PLAY_STORE_LINK" target="_blank" class="project-icon">
-<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleplay.svg" alt="Google Play">
-</a>
+      </div>
+    </section>
 
-<a href="APP_STORE_LINK" target="_blank" class="project-icon">
-<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apple.svg" alt="App Store">
-</a>
 
-<a href="WEBSITE_LINK" target="_blank" class="project-icon">
-<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlechrome.svg" alt="Website">
-</a>
+    <footer>
+      © 2026 Sachin Gupta • Flutter & Android Developer
+    </footer>
 
-</div>
+    <script>
 
-</div>
+      const roles = [
+        "Flutter Developer",
+        "Android Developer",
+        "iOS Developer",
+        "Mobile App Architect",
+        "Mobile App Developer",
+        "Backend API Developer",
+        "UI/UX Focused Engineer",
+        "Tech Team Lead"
+      ];
 
-<!-- PROJECT 3 -->
+      let roleIndex = 0;
+      let charIndex = 0;
+      let deleting = false;
 
-<div class="card project">
+      const typed = document.getElementById("typed");
 
-<span class="project-tag">Flutter • Finance</span>
+      function typeEffect() {
 
-<h3>Ram Ram Bank</h3>
+        let current = roles[roleIndex];
 
-<p class="project-domain">
-Domain: Devotional / Spiritual Banking
-</p>
+        if (!deleting) {
 
-<p>
-A unique devotional application where users chant Ram Nam through
-tapping and typing interactions while tracking mala counts and
-rewarding top participants.
-</p>
+          typed.textContent = current.substring(0, charIndex++);
 
-<div class="project-links">
+          if (charIndex > current.length) {
+            deleting = true;
+            setTimeout(typeEffect, 1000);
+            return;
+          }
 
-<a href="PLAY_STORE_LINK" target="_blank" class="project-icon">
-<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googleplay.svg" alt="Google Play">
-</a>
+        }
 
-</div>
+        else {
 
-</div>
+          typed.textContent = current.substring(0, charIndex--);
 
-</div>
-</div>
-</section>
+          if (charIndex === 0) {
+            deleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+          }
 
-<!-- GITHUB -->
+        }
 
-<section class="section">
-<div class="container">
+        setTimeout(typeEffect, deleting ? 40 : 80);
 
-<div class="section-head">
-<div>
-<div class="kicker">Open Source</div>
-<h2>GitHub Stats</h2>
-</div>
-</div>
+      }
 
-  
+      typeEffect();
 
-<div style="text-align:center">
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
 
-<img height="170"
-src="https://github-readme-stats-sigma-five.vercel.app/api?username=sachinguptadz&show_icons=true&hide_border=true&theme=default"
-alt="GitHub Stats">
+      document.querySelectorAll(".reveal").forEach(el => {
+        observer.observe(el);
+      });
 
-<br><br>
 
-<img
-src="https://github-readme-activity-graph.vercel.app/graph?username=sachinguptadz&theme=github-light">
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileDrawer = document.getElementById("mobileDrawer");
+      const drawerOverlay = document.getElementById("drawerOverlay");
 
-</div>
+      menuToggle.addEventListener("click", () => {
 
-  
+        mobileDrawer.classList.toggle("open");
 
-</div>
-</section>
+        drawerOverlay.classList.toggle("show");
 
-<!-- CONTACT -->
+      });
 
-<section id="contact" class="section">
-<div class="container">
+      drawerOverlay.addEventListener("click", () => {
 
-<div class="cta">
+        mobileDrawer.classList.remove("open");
 
-<h2>Let's Build Something Great</h2>
+        drawerOverlay.classList.remove("show");
 
-<p>
-I'm always interested in discussing new projects,
-mobile app ideas, or collaboration opportunities.
-</p>
+      });
 
-<div class="hero-actions">
+      /* close after click */
 
-<a class="btn btn-secondary" href="mailto:sachinguptadz@gmail.com">
-Email Me
-</a>
+      const drawerLinks = document.querySelectorAll(".mobile-drawer a");
 
-<a class="btn btn-secondary" href="https://www.linkedin.com/in/sachindzz/" target="_blank">
-LinkedIn
-</a>
+      drawerLinks.forEach(link => {
 
-</div>
+        link.addEventListener("click", function () {
 
-</div>
+          drawerLinks.forEach(l => l.classList.remove("active"));
 
-</div>
-</section>
+          this.classList.add("active");
 
-<footer>
-© 2026 Sachin Gupta
-</footer>
+          mobileDrawer.classList.remove("open");
+          drawerOverlay.classList.remove("show");
 
-<script>
+        });
 
-const roles = [
-"Flutter Developer",
-"Android Developer",
-"Mobile App Developer",
-"UI Focused Engineer"
-];
+      });
 
-let roleIndex = 0;
-let charIndex = 0;
-let deleting = false;
+      /* close menu after click */
 
-const typed = document.getElementById("typed");
+      const navLinks = document.querySelectorAll(".nav-links a");
 
-function typeEffect(){
+      navLinks.forEach(link => {
 
-let current = roles[roleIndex];
+        link.addEventListener("click", function () {
 
-if(!deleting){
+          navLinks.forEach(l => l.classList.remove("active"));
 
-typed.textContent = current.substring(0,charIndex++);
+          this.classList.add("active");
 
-if(charIndex>current.length){
-deleting=true;
-setTimeout(typeEffect,1000);
-return;
-}
+        });
 
-}
+      });
 
-else{
 
-typed.textContent = current.substring(0,charIndex--);
+      const sections = document.querySelectorAll("section");
+      const navItems = document.querySelectorAll(".nav-links a");
 
-if(charIndex===0){
-deleting=false;
-roleIndex=(roleIndex+1)%roles.length;
-}
+      window.addEventListener("scroll", () => {
 
-}
+        let current = "";
 
-setTimeout(typeEffect,deleting?40:80);
+        sections.forEach(section => {
 
-}
+          const sectionTop = section.offsetTop - 100;
 
-typeEffect();
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+          }
 
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
+        });
 
-document.querySelectorAll(".reveal").forEach(el=>{
-observer.observe(el);
-});
+        navItems.forEach(link => {
 
-</script>
+          link.classList.remove("active");
+
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+
+        });
+
+      });
+
+    </script>
 
 </body>
+
 </html>
