@@ -1,173 +1,1116 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Sachin Gupta Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sachin Gupta | Portfolio</title>
+  <meta
+    name="description"
+    content="Sachin Gupta - Flutter & Android Developer portfolio"
+  />
 
-<style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
-body{
-font-family: Arial;
-margin:0;
-background:#0f172a;
-color:white;
-}
+  <style>
+    :root {
+      --bg: #f8fbff;
+      --bg-soft: #eef6ff;
+      --card: rgba(255, 255, 255, 0.72);
+      --card-solid: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: rgba(15, 23, 42, 0.08);
+      --primary: #2563eb;
+      --primary-2: #7c3aed;
+      --accent: #06b6d4;
+      --shadow: 0 20px 50px rgba(37, 99, 235, 0.10);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 16px;
+      --max: 1180px;
+    }
 
-.container{
-width:1000px;
-margin:auto;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-section{
-padding:60px 0;
-border-bottom:1px solid #1e293b;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-h1,h2{
-color:#4FC3F7;
-}
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.16), transparent 28%),
+        radial-gradient(circle at 85% 12%, rgba(124, 58, 237, 0.14), transparent 22%),
+        radial-gradient(circle at 50% 100%, rgba(6, 182, 212, 0.10), transparent 26%),
+        linear-gradient(180deg, #fafdff 0%, #f5f9ff 100%);
+      overflow-x: hidden;
+    }
 
-.nav{
-background:#020617;
-padding:20px;
-text-align:center;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-.hero{
-text-align:center;
-padding:120px 0;
-}
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-.skills img{
-height:40px;
-margin:8px;
-}
+    .blur {
+      position: fixed;
+      inset: auto;
+      border-radius: 999px;
+      filter: blur(70px);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.55;
+    }
 
-.card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-margin-bottom:20px;
-}
+    .blur.one {
+      width: 320px;
+      height: 320px;
+      top: 80px;
+      left: -60px;
+      background: rgba(59, 130, 246, 0.25);
+      animation: floatBlob 12s ease-in-out infinite;
+    }
 
-</style>
+    .blur.two {
+      width: 280px;
+      height: 280px;
+      top: 380px;
+      right: -30px;
+      background: rgba(124, 58, 237, 0.18);
+      animation: floatBlob 14s ease-in-out infinite reverse;
+    }
 
+    .blur.three {
+      width: 260px;
+      height: 260px;
+      bottom: 60px;
+      left: 40%;
+      background: rgba(6, 182, 212, 0.14);
+      animation: floatBlob 16s ease-in-out infinite;
+    }
+
+    @keyframes floatBlob {
+      0%, 100% { transform: translateY(0) translateX(0) scale(1); }
+      50% { transform: translateY(-18px) translateX(14px) scale(1.06); }
+    }
+
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(248, 251, 255, 0.72);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      font-size: 1.05rem;
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.22);
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 10px 14px;
+      border-radius: 12px;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      background: rgba(37, 99, 235, 0.08);
+    }
+
+    .hero {
+      padding: 72px 0 40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .glass {
+      background: var(--card);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-xl);
+    }
+
+    .hero-card {
+      padding: 38px;
+      position: relative;
+      overflow: hidden;
+      min-height: 560px;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -80px auto;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.12), transparent 68%);
+      border-radius: 999px;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.08);
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      margin: 22px 0 14px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 58%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      max-width: 660px;
+      color: var(--muted);
+      font-size: 1.06rem;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .type-line {
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-weight: 700;
+      color: #1d4ed8;
+      min-height: 2rem;
+      margin-bottom: 18px;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      animation: blink 0.85s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 26px 0 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      cursor: pointer;
+      font-weight: 700;
+      padding: 14px 20px;
+      border-radius: 16px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow: 0 16px 32px rgba(37, 99, 235, 0.22);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .mini-card {
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .mini-label {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #64748b;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .mini-value {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .profile-card {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 270px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-art {
+      position: absolute;
+      right: -24px;
+      top: -20px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle at center, rgba(37, 99, 235, 0.16), transparent 66%);
+      border-radius: 50%;
+    }
+
+    .avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 26px;
+      display: grid;
+      place-items: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 16px 32px rgba(37, 99, 235, 0.22);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      color: #1d4ed8;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .social-card {
+      padding: 22px;
+    }
+
+    .social-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      border-radius: 18px;
+      padding: 14px 16px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .social-link:hover {
+      transform: translateX(4px);
+      border-color: rgba(37, 99, 235, 0.22);
+    }
+
+    .section {
+      padding: 44px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .kicker {
+      color: var(--primary);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .section-desc {
+      max-width: 650px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .cards-3,
+    .cards-2 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .cards-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .cards-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
+      transition: transform 0.24s ease, box-shadow 0.24s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.08);
+    }
+
+    .icon-box {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.14), rgba(124, 58, 237, 0.10));
+      color: var(--primary);
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      letter-spacing: -0.03em;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .card ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+    }
+
+    .stack-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .stack-chip {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.10), rgba(6, 182, 212, 0.08));
+      border: 1px solid rgba(37, 99, 235, 0.08);
+      color: #1e3a8a;
+      font-weight: 700;
+      transition: transform 0.18s ease;
+    }
+
+    .stack-chip:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: linear-gradient(180deg, rgba(37, 99, 235, 0.35), rgba(124, 58, 237, 0.15));
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 38px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.09);
+    }
+
+    .timeline-card {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      border-radius: 22px;
+      padding: 22px;
+    }
+
+    .timeline-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .time {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project {
+      position: relative;
+      overflow: hidden;
+      min-height: 260px;
+    }
+
+    .project::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0)),
+        radial-gradient(circle at top right, rgba(124,58,237,0.12), transparent 35%);
+      pointer-events: none;
+    }
+
+    .project-tag {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      color: #1d4ed8;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .muted-note {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    .cta {
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(37, 99, 235, 0.94), rgba(124, 58, 237, 0.94));
+      color: white;
+      box-shadow: 0 26px 60px rgba(37, 99, 235, 0.24);
+    }
+
+    .cta::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 999px;
+      top: -70px;
+      right: -60px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .cta p {
+      color: rgba(255,255,255,0.88);
+      max-width: 700px;
+      line-height: 1.8;
+    }
+
+    footer {
+      padding: 26px 0 52px;
+      color: #64748b;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px) scale(0.985);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .highlight-grid,
+      .cards-3,
+      .cards-2,
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 720px) {
+      nav {
+        height: auto;
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      .hero-card,
+      .profile-card,
+      .social-card,
+      .card,
+      .timeline-card,
+      .cta {
+        padding: 22px;
+      }
+
+      .container {
+        width: min(var(--max), calc(100% - 20px));
+      }
+
+      .section {
+        padding: 32px 0;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="blur one"></div>
+  <div class="blur two"></div>
+  <div class="blur three"></div>
 
-<div class="nav">
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#education">Education</a>
-<a href="#contact">Contact</a>
-</div>
+  <div class="nav-wrap">
+    <div class="container">
+      <nav>
+        <a class="brand" href="#top">
+          <span class="brand-badge">SG</span>
+          <span>Sachin Gupta</span>
+        </a>
 
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#strengths">Strengths</a>
+          <a href="#focus">Focus</a>
+          <a href="#journey">Journey</a>
+          <a href="#projects">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card glass reveal">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            Open to building meaningful digital products
+          </div>
+
+          <h1>
+            Hi, I’m <span class="gradient-text">Sachin Gupta</span>
+          </h1>
+
+          <div class="type-line">
+            <span id="typed"></span><span class="cursor">|</span>
+          </div>
+
+          <p class="hero-sub">
+            I design portfolio-worthy mobile product experiences with a clean,
+            modern visual language, thoughtful interactions, and a strong focus
+            on clarity, usability, and impact.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Let’s Connect</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/sachindzz/" target="_blank" rel="noreferrer">View LinkedIn</a>
+          </div>
+
+          <div class="mini-grid">
+            <div class="mini-card">
+              <div class="mini-label">Identity</div>
+              <div class="mini-value">Sachin Gupta</div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-label">Primary Role</div>
+              <div class="mini-value">Flutter & Android</div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-label">Focus</div>
+              <div class="mini-value">Mobile App Experiences</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-side">
+          <div class="profile-card glass reveal">
+            <div class="profile-art"></div>
+            <div>
+              <div class="avatar">SG</div>
+              <h3 style="margin:18px 0 8px; font-size:1.5rem;">Profile Snapshot</h3>
+              <p style="color:var(--muted); line-height:1.8; margin:0;">
+                A refined personal portfolio with a bright premium theme,
+                smooth reveal animations, elegant cards, and a structure ready
+                for deeper career details whenever you want to add them.
+              </p>
+            </div>
+
+            <div class="pill-row">
+              <span class="pill">Light Theme</span>
+              <span class="pill">Animated UI</span>
+              <span class="pill">Responsive</span>
+            </div>
+          </div>
+
+          <div class="social-card glass reveal">
+            <div class="kicker">Reach Out</div>
+            <h3 style="margin:0 0 8px; font-size:1.35rem;">Connect with me</h3>
+            <p class="muted-note" style="margin:0 0 14px;">
+              Keep your public links here so recruiters and clients can reach you fast.
+            </p>
+
+            <div class="social-grid">
+              <a class="social-link" href="mailto:sachinguptadz@gmail.com">
+                <span>Email</span>
+                <strong>Send message ↗</strong>
+              </a>
+             <!-- CONTINUE FROM YOUR CODE ABOVE -->
+
+              <a class="social-link" href="https://www.linkedin.com/in/sachindzz/" target="_blank">
+                <span>LinkedIn</span>
+                <strong>Visit Profile ↗</strong>
+              </a>
+
+              <a class="social-link" href="https://github.com/sachinguptadz" target="_blank">
+                <span>GitHub</span>
+                <strong>View Code ↗</strong>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ABOUT -->
+
+<section id="about" class="section">
 <div class="container">
 
-<section class="hero">
+<div class="section-head">
+<div>
+<div class="kicker">About</div>
+<h2>Who I Am</h2>
+</div>
 
-<h1>Sachin Gupta</h1>
-<p>Cross Platform Mobile Developer</p>
-<p>Flutter | Android | Kotlin | Dart</p>
-
-</section>
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<p>
-I am a cross-platform mobile developer building high-performance applications
-using Flutter and Android technologies.
+<p class="section-desc">
+Flutter & Android developer focused on building high-quality
+mobile applications with elegant UI, strong performance,
+and scalable architecture.
 </p>
 
+</div>
+
+<div class="cards-3">
+
+<div class="card">
+<div class="icon-box">📱</div>
+<h3>Mobile Development</h3>
+<p>Building high performance mobile apps with Flutter and Android.</p>
+</div>
+
+<div class="card">
+<div class="icon-box">🎨</div>
+<h3>UI/UX Design</h3>
+<p>Designing modern interfaces with smooth interactions and responsive layouts.</p>
+</div>
+
+<div class="card">
+<div class="icon-box">⚡</div>
+<h3>Performance</h3>
+<p>Creating scalable and optimized apps focused on user experience.</p>
+</div>
+
+</div>
+</div>
 </section>
 
-<section id="skills">
+<!-- SKILLS -->
 
-<h2>Skills</h2>
+<section id="strengths" class="section">
+<div class="container">
 
-<div class="skills">
+<div class="section-head">
+<div>
+<div class="kicker">Skills</div>
+<h2>Technology Stack</h2>
+</div>
+</div>
 
-<img src="https://skillicons.dev/icons?i=flutter">
-<img src="https://skillicons.dev/icons?i=kotlin">
-<img src="https://skillicons.dev/icons?i=java">
-<img src="https://skillicons.dev/icons?i=firebase">
-<img src="https://skillicons.dev/icons?i=nodejs">
-<img src="https://skillicons.dev/icons?i=git">
-<img src="https://skillicons.dev/icons?i=github">
+<div class="stack-wrap">
+
+<span class="stack-chip">Flutter</span>
+<span class="stack-chip">Dart</span>
+<span class="stack-chip">Android</span>
+<span class="stack-chip">Kotlin</span>
+<span class="stack-chip">Java</span>
+<span class="stack-chip">Firebase</span>
+<span class="stack-chip">REST APIs</span>
+<span class="stack-chip">Git</span>
+<span class="stack-chip">GitHub</span>
 
 </div>
 
+</div>
 </section>
 
-<section id="projects">
+<!-- EXPERIENCE -->
 
+<section id="journey" class="section">
+<div class="container">
+
+<div class="section-head">
+<div>
+<div class="kicker">Experience</div>
+<h2>Professional Journey</h2>
+</div>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-card">
+<div class="timeline-top">
+<strong>Flutter Developer</strong>
+<span class="time">Current</span>
+</div>
+<p>Building modern cross-platform mobile applications.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-card">
+<div class="timeline-top">
+<strong>Android Developer</strong>
+<span class="time">Earlier</span>
+</div>
+<p>Developed Android apps using Kotlin and Java.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="section">
+<div class="container">
+
+<div class="section-head">
+<div>
+<div class="kicker">Portfolio</div>
 <h2>Projects</h2>
-
-<div class="card">
-
-<h3>No Bunk</h3>
-<p>School management system with bus tracking, reports and finance modules.</p>
-
+</div>
 </div>
 
-<div class="card">
+<div class="projects">
 
-<h3>Cosmic Numerate</h3>
-<p>Numerology application with social features and AI name suggestions.</p>
-
+<div class="card project">
+<span class="project-tag">Flutter</span>
+<h3>Mobile App</h3>
+<p>Cross-platform mobile app built using Flutter.</p>
 </div>
 
-<div class="card">
-
-<h3>Amazon Clone</h3>
-<p>E-commerce application built with Flutter and Firebase.</p>
-
+<div class="card project">
+<span class="project-tag">Android</span>
+<h3>Android Application</h3>
+<p>Native Android application built using Kotlin.</p>
 </div>
 
+<div class="card project">
+<span class="project-tag">UI</span>
+<h3>Modern UI Design</h3>
+<p>Elegant interface with animations and responsive layouts.</p>
+</div>
+
+</div>
+</div>
 </section>
 
-<section id="education">
+<!-- GITHUB -->
 
-<h2>Education</h2>
+<section class="section">
+<div class="container">
 
-<div class="card">
+<div class="section-head">
+<div>
+<div class="kicker">Open Source</div>
+<h2>GitHub Stats</h2>
+</div>
+</div>
 
-<h3>MCA</h3>
-<p>Dr. B C Roy Engineering College</p>
+<div style="display:flex; gap:20px; flex-wrap:wrap;">
+
+<img src="https://github-readme-stats.vercel.app/api?username=sachinguptadz&show_icons=true">
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sachinguptadz&layout=compact">
 
 </div>
 
-<div class="card">
-
-<h3>BCA</h3>
-<p>NSHM College of Management and Technology</p>
-
 </div>
-
 </section>
 
-<section id="contact">
+<!-- CONTACT -->
 
-<h2>Contact</h2>
+<section id="contact" class="section">
+<div class="container">
 
-<p>Email: sachinguptadz@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/sachindzz</p>
+<div class="cta">
 
-</section>
+<h2>Let's Build Something Great</h2>
+
+<p>
+I'm always interested in discussing new projects,
+mobile app ideas, or collaboration opportunities.
+</p>
+
+<div class="hero-actions">
+
+<a class="btn btn-secondary" href="mailto:sachinguptadz@gmail.com">
+Email Me
+</a>
+
+<a class="btn btn-secondary" href="https://www.linkedin.com/in/sachindzz/" target="_blank">
+LinkedIn
+</a>
 
 </div>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Sachin Gupta
+</footer>
+
+<script>
+
+const roles = [
+"Flutter Developer",
+"Android Developer",
+"Mobile App Developer",
+"UI Focused Engineer"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+const typed = document.getElementById("typed");
+
+function typeEffect(){
+
+let current = roles[roleIndex];
+
+if(!deleting){
+
+typed.textContent = current.substring(0,charIndex++);
+
+if(charIndex>current.length){
+deleting=true;
+setTimeout(typeEffect,1000);
+return;
+}
+
+}
+
+else{
+
+typed.textContent = current.substring(0,charIndex--);
+
+if(charIndex===0){
+deleting=false;
+roleIndex=(roleIndex+1)%roles.length;
+}
+
+}
+
+setTimeout(typeEffect,deleting?40:80);
+
+}
+
+typeEffect();
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".reveal").forEach(el=>{
+observer.observe(el);
+});
+
+</script>
 
 </body>
-
 </html>
