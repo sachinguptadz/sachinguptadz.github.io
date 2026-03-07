@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
 
+<head>
 <meta charset="UTF-8">
-<title>Sachin Gupta | Mobile Developer</title>
+<title>Sachin Gupta Portfolio</title>
 
 <style>
 
 body{
+font-family: Arial;
+margin:0;
 background:#0f172a;
 color:white;
-font-family:Arial;
-margin:40px;
 }
 
 .container{
-max-width:1100px;
+width:1000px;
 margin:auto;
 }
 
-h1,h2,h3{
+section{
+padding:60px 0;
+border-bottom:1px solid #1e293b;
+}
+
+h1,h2{
 color:#4FC3F7;
 }
 
-.tech img{
-height:45px;
-margin:8px;
+.nav{
+background:#020617;
+padding:20px;
+text-align:center;
 }
 
-.badges img{
-margin:6px;
+.nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+}
+
+.hero{
+text-align:center;
+padding:120px 0;
+}
+
+.skills img{
+height:40px;
+margin:8px;
 }
 
 .card{
@@ -39,157 +57,117 @@ border-radius:10px;
 margin-bottom:20px;
 }
 
-hr{
-border:1px solid #00D8FF;
-}
-
 </style>
 
 </head>
 
 <body>
 
+<div class="nav">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</div>
+
 <div class="container">
 
-<h1 align="center">👋 Hi I'm Sachin Gupta</h1>
+<section class="hero">
 
-<p align="center">
-Cross-Platform Mobile Developer | Flutter | Android | Team Leader
-</p>
+<h1>Sachin Gupta</h1>
+<p>Cross Platform Mobile Developer</p>
+<p>Flutter | Android | Kotlin | Dart</p>
 
-<hr>
+</section>
 
-<div class="card">
+<section id="about">
 
-<h2>👨‍💻 About Me</h2>
+<h2>About Me</h2>
 
 <p>
-I build high-performance cross-platform applications using Flutter and Android.
-I focus on scalable architecture, elegant UI/UX, and business-focused solutions.
+I am a cross-platform mobile developer building high-performance applications
+using Flutter and Android technologies.
 </p>
 
-</div>
+</section>
 
-<div class="card">
+<section id="skills">
 
-<h2>🚀 Programming Languages</h2>
+<h2>Skills</h2>
 
-<div class="tech">
-
-<img src="https://skillicons.dev/icons?i=java">
-<img src="https://skillicons.dev/icons?i=kotlin">
-<img src="https://skillicons.dev/icons?i=dart">
-<img src="https://skillicons.dev/icons?i=python">
-<img src="https://skillicons.dev/icons?i=c">
-<img src="https://skillicons.dev/icons?i=cpp">
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>📱 Mobile Development</h2>
-
-<div class="tech">
+<div class="skills">
 
 <img src="https://skillicons.dev/icons?i=flutter">
-<img src="https://skillicons.dev/icons?i=androidstudio">
 <img src="https://skillicons.dev/icons?i=kotlin">
-
-</div>
-
-<p>
-
-• Flutter (Dart) cross-platform development  
-• Native Android (Java / Kotlin)  
-• Jetpack Compose UI  
-• Material Design UI  
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>⚙ Backend & APIs</h2>
-
-<div class="tech">
-
-<img src="https://skillicons.dev/icons?i=nodejs">
-<img src="https://skillicons.dev/icons?i=express">
+<img src="https://skillicons.dev/icons?i=java">
 <img src="https://skillicons.dev/icons?i=firebase">
-<img src="https://skillicons.dev/icons?i=mongodb">
+<img src="https://skillicons.dev/icons?i=nodejs">
+<img src="https://skillicons.dev/icons?i=git">
+<img src="https://skillicons.dev/icons?i=github">
 
 </div>
 
-<p>
+</section>
 
-• REST APIs  
-• Real-time sockets  
-• Firebase authentication  
-• Push notifications  
+<section id="projects">
 
-</p>
-
-</div>
-
+<h2>Projects</h2>
 
 <div class="card">
 
-<h2>🏗 Architecture & State Management</h2>
-
-<ul>
-
-<li>Clean Architecture</li>
-<li>BLoC</li>
-<li>Provider</li>
-<li>GetX</li>
-
-</ul>
+<h3>No Bunk</h3>
+<p>School management system with bus tracking, reports and finance modules.</p>
 
 </div>
 
 <div class="card">
 
-<h2>🧠 Features I Build</h2>
-
-<ul>
-
-<li>Payment Gateways</li>
-<li>Location Tracking</li>
-<li>Realtime Chat / Socket</li>
-<li>Push Notifications</li>
-<li>Offline-First Apps</li>
-<li>Secure Storage</li>
-
-</ul>
+<h3>Cosmic Numerate</h3>
+<p>Numerology application with social features and AI name suggestions.</p>
 
 </div>
 
 <div class="card">
 
-<h2>📫 Contact</h2>
-
-<div class="badges">
-
-<a href="mailto:sachinguptadz@gmail.com">
-<img src="https://img.shields.io/badge/Email-red?style=for-the-badge&logo=gmail&logoColor=white">
-</a>
-
-<a href="https://www.linkedin.com/in/sachindzz">
-<img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white">
-</a>
-
-<a href="https://www.instagram.com/sachindzz">
-<img src="https://img.shields.io/badge/Instagram-pink?style=for-the-badge&logo=instagram&logoColor=white">
-</a>
+<h3>Amazon Clone</h3>
+<p>E-commerce application built with Flutter and Firebase.</p>
 
 </div>
 
+</section>
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="card">
+
+<h3>MCA</h3>
+<p>Dr. B C Roy Engineering College</p>
+
 </div>
+
+<div class="card">
+
+<h3>BCA</h3>
+<p>NSHM College of Management and Technology</p>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: sachinguptadz@gmail.com</p>
+<p>LinkedIn: linkedin.com/in/sachindzz</p>
+
+</section>
 
 </div>
 
 </body>
+
 </html>
