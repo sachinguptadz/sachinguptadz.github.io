@@ -34,6 +34,8 @@
   <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
   <link rel="canonical" href="https://sachinguptadz.github.io/">
 
   <meta name="description"
@@ -563,6 +565,7 @@ Android Engineer
 
     .section {
       padding: 44px 0;
+      transition: all .6s cubic-bezier(.22, 1, .36, 1);
     }
 
     .section-head {
@@ -664,6 +667,8 @@ Android Engineer
     .card:hover::before {
       opacity: 0.45;
     }
+
+
 
     .card:hover {
       transform: translateY(-6px);
@@ -1045,6 +1050,8 @@ Android Engineer
       border-radius: 3px;
       transition: .3s;
     }
+
+
 
     /* MOBILE NAV */
 
@@ -2907,6 +2914,84 @@ Android Engineer
           `center ${sc * 0.3}px`;
 
       });
+
+
+
+      //Add Smooth Page Scroll Engine
+      const lenis = new Lenis({
+        duration: 1.2,
+        smoothWheel: true
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+
+      // sync scroll events
+      lenis.on("scroll", () => {
+        window.dispatchEvent(new Event("scroll"));
+      });
+
+
+
+      //  Magnetic Buttons (Elite Interaction)
+
+      document.querySelectorAll(".btn").forEach(btn => {
+
+        btn.addEventListener("mousemove", e => {
+
+          const rect = btn.getBoundingClientRect();
+
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+
+          btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+
+        });
+
+        btn.addEventListener("mouseleave", () => {
+          btn.style.transform = "translate(0,0)";
+        });
+
+      });
+
+
+
+      //Hero Particle Background
+      const canvas = document.createElement("canvas");
+      document.body.appendChild(canvas);
+
+      const ctx = canvas.getContext("2d");
+
+      let particles = [];
+
+      for (let i = 0; i < 50; i++) {
+        particles.push({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          r: Math.random() * 2
+        });
+      }
+
+      function draw() {
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(p => {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        requestAnimationFrame(draw);
+
+      }
+
+      draw();
+
 
     </script>
 
