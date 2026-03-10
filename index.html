@@ -231,11 +231,27 @@ Flutter Android Developer India
       padding: 10px 14px;
       border-radius: 12px;
       transition: 0.25s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: #2563eb;
+      transition: .3s;
     }
 
     .nav-links a:hover {
       color: var(--primary);
       background: rgba(37, 99, 235, 0.08);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
     .hero {
@@ -367,6 +383,11 @@ Flutter Android Developer India
       box-shadow: 0 16px 32px rgba(37, 99, 235, 0.22);
     }
 
+    .btn-primary:hover {
+      box-shadow:
+        0 18px 40px rgba(37, 99, 235, .35);
+    }
+
     .btn-secondary {
       color: var(--text);
       background: rgba(255, 255, 255, 0.9);
@@ -439,6 +460,35 @@ Flutter Android Developer India
       background: linear-gradient(135deg, var(--primary), var(--accent));
       box-shadow: 0 16px 32px rgba(37, 99, 235, 0.22);
     }
+
+    .drawer-avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 26px;
+      display: grid;
+      place-items: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 16px 32px rgba(37, 99, 235, 0.22);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 26px;
+    }
+
+    .drawer-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 26px;
+    }
+
+
 
     .pill-row {
       display: flex;
@@ -532,17 +582,55 @@ Flutter Android Developer India
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.76);
-      border: 1px solid rgba(15, 23, 42, 0.06);
+      position: relative;
+      background: rgba(255, 255, 255, 0.75);
+
       border-radius: 24px;
       padding: 24px;
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
-      transition: transform 0.24s ease, box-shadow 0.24s ease;
+
+      border: 1px solid rgba(255, 255, 255, 0.7);
+
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.05);
+
+      backdrop-filter: blur(10px);
+
+      overflow: hidden;
+
+      transition: all 0.35s ease;
+    }
+
+    /* soft gradient glow */
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+
+      background: linear-gradient(120deg,
+          rgba(37, 99, 235, 0.35),
+          rgba(124, 58, 237, 0.30),
+          rgba(6, 182, 212, 0.30));
+
+      opacity: 0;
+      filter: blur(28px);
+
+      transition: opacity 0.35s ease;
+
+      z-index: -1;
+    }
+
+    /* hover */
+
+    .card:hover::before {
+      opacity: 0.45;
     }
 
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.08);
+
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.08);
     }
 
     .icon-box {
@@ -753,10 +841,11 @@ Flutter Android Developer India
     }
 
     footer {
-      padding: 26px 0 52px;
+      padding: 40px 0 52px;
       color: #64748b;
       text-align: center;
       font-weight: 500;
+      font-size: 14px;
     }
 
     .reveal {
@@ -1209,6 +1298,221 @@ Flutter Android Developer India
 
     }
 
+    .hero-metrics {
+      display: flex;
+      gap: 28px;
+      margin-top: 22px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .hero-metrics div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-metrics strong {
+      font-size: 20px;
+      color: #2563eb;
+    }
+
+    .hero-metrics span {
+      font-size: 13px;
+      color: #64748b;
+    }
+
+
+    .section {
+      position: relative;
+    }
+
+    .section::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      border-radius: 3px;
+    }
+
+    .project:hover .project-links {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project-links {
+      opacity: .7;
+      transition: .3s;
+    }
+
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      width: 0%;
+      z-index: 9999;
+    }
+
+    #backTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      border: none;
+      background: #2563eb;
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      font-size: 18px;
+    }
+
+    .hire-btn {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+
+      padding: 14px 18px;
+      border-radius: 40px;
+
+      font-weight: 700;
+      font-size: 14px;
+
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .2);
+
+      z-index: 999;
+      transition: .25s;
+    }
+
+    .hire-btn:hover {
+      transform: translateY(-3px);
+    }
+
+
+
+    .github-card {
+      text-align: center;
+      padding: 32px;
+      margin-bottom: 30px;
+    }
+
+    .github-title {
+      margin: 0;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .github-desc {
+      color: #64748b;
+      max-width: 640px;
+      margin: 0 auto 24px;
+      line-height: 1.7;
+    }
+
+    .github-chart {
+      overflow-x: auto;
+      padding: 16px;
+    }
+
+    .github-chart img {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .github-action {
+      margin-top: 22px;
+    }
+
+    /* Grid Layout */
+
+    .github-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .github-widget {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 22px;
+    }
+
+    .github-widget img {
+      width: 100%;
+      max-width: 500px;
+    }
+
+
+    .cursor-dot {
+      position: fixed;
+
+      width: 18px;
+      height: 18px;
+
+      border-radius: 50%;
+
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+
+      pointer-events: none;
+
+      transform: translate(-50%, -50%);
+
+      z-index: 9999;
+
+      transition: opacity .25s ease;
+    }
+
+    /* disable on touch devices */
+
+    @media (hover:none) {
+      .cursor-dot {
+        display: none;
+      }
+
+      body {
+        cursor: auto;
+      }
+    }
+
+
+    body {
+      animation: fadePage .6s ease;
+    }
+
+    @keyframes fadePage {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    body:hover .cursor-dot {
+      opacity: 1;
+    }
+
+    /* Responsive */
+
+    @media(max-width:900px) {
+
+      .github-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
 
     @media(max-width:768px) {
 
@@ -1247,6 +1551,8 @@ Flutter Android Developer India
 </head>
 
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <div class="blur one"></div>
   <div class="blur two"></div>
   <div class="blur three"></div>
@@ -1293,7 +1599,9 @@ Flutter Android Developer India
 
     <div class="drawer-header">
 
-      <div class="drawer-avatar">SG</div>
+      <div class="drawer-avatar">
+        <img src="profile.jpeg" alt="Sachin Gupta">
+      </div>
 
       <div class="drawer-name">Sachin Gupta</div>
 
@@ -1336,14 +1644,31 @@ Flutter Android Developer India
           </div>
 
           <p class="hero-sub">
-            Flutter and Native Android developer with 4+ years of experience building scalable mobile applications
-            across fintech, Web3, logistics, real estate, and enterprise platforms, delivering high-performance products
-            from architecture to production deployment.
+            Mobile engineer specializing in <strong>Flutter & Android development</strong>.
+            I design and build scalable mobile applications across fintech, Web3, logistics,
+            and enterprise platforms — from architecture to production deployment.
           </p>
+
+          <div class="hero-metrics">
+            <div>
+              <strong>25+</strong>
+              <span>Apps Delivered</span>
+            </div>
+
+            <div>
+              <strong>4+</strong>
+              <span>Years Experience</span>
+            </div>
+
+            <div>
+              <strong>10+</strong>
+              <span>Industries</span>
+            </div>
+          </div>
 
           <div class="hero-actions">
 
-            <a class="btn btn-primary" href="#contact">Let’s Connect</a>
+            <a class="btn btn-primary" href="#contact">Hire Me</a>
 
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/sachindzz/" target="_blank" rel="noreferrer">
               View LinkedIn
@@ -1354,6 +1679,8 @@ Flutter Android Developer India
             </a>
 
           </div>
+
+
 
           <div class="mini-grid">
 
@@ -1379,7 +1706,11 @@ Flutter Android Developer India
           <div class="profile-card glass reveal">
             <div class="profile-art"></div>
             <div>
-              <div class="avatar">SG</div>
+
+              <div class="avatar">
+                <img src="profile.jpeg" alt="Sachin Gupta">
+              </div>
+
               <h3 style="margin:18px 0 8px; font-size:1.5rem;">Profile Snapshot</h3>
               <p style="color:var(--muted); line-height:1.8; margin:0;">
                 Mobile engineer specializing in Flutter and Android development with experience building
@@ -2052,25 +2383,62 @@ Flutter Android Developer India
         <div class="section-head">
           <div>
             <div class="kicker">Open Source</div>
-            <h2>GitHub Stats</h2>
+            <h2>GitHub Activity</h2>
           </div>
         </div>
 
+        <!-- Contribution Calendar -->
 
+        <div class="github-card glass reveal">
 
-        <div style="text-align:center">
+          <h3 class="github-title">Contribution Calendar</h3>
 
-          <img height="170"
-            src="https://github-readme-stats-sigma-five.vercel.app/api?username=sachinguptadz&show_icons=true&hide_border=true&theme=default"
-            alt="GitHub Stats">
+          <p class="github-desc">
+            I actively build projects and contribute to open-source software.
+            Below is a snapshot of my GitHub activity and coding consistency.
+          </p>
 
-          <br><br>
+          <div class="github-chart">
 
-          <img src="https://github-readme-activity-graph.vercel.app/graph?username=sachinguptadz&theme=github-light">
+            <img src="https://ghchart.rshah.org/sachinguptadz" alt="Sachin Gupta GitHub Contribution Chart"
+              loading="lazy" />
+
+          </div>
+
+          <div class="github-action">
+
+            <a href="https://github.com/sachinguptadz" target="_blank" class="btn btn-primary">
+              View GitHub Profile
+            </a>
+
+          </div>
 
         </div>
 
+        <!-- GitHub Stats Grid -->
 
+        <div class="github-grid reveal">
+
+          <!-- GitHub Stats -->
+
+          <div class="github-widget card">
+
+            <img
+              src="https://github-readme-stats-sigma-five.vercel.app/api?username=sachinguptadz&show_icons=true&hide_border=true&theme=default"
+              alt="GitHub Stats" loading="lazy" />
+
+          </div>
+
+          <!-- Activity Graph -->
+
+          <div class="github-widget card">
+
+            <img src="https://github-readme-activity-graph.vercel.app/graph?username=sachinguptadz&theme=github-light"
+              alt="GitHub Activity Graph" loading="lazy" />
+
+          </div>
+
+        </div>
 
       </div>
     </section>
@@ -2113,9 +2481,18 @@ Flutter Android Developer India
     </section>
 
 
+    <a href="#contact" class="hire-btn">
+      💬 Hire Me
+    </a>
+
+    <div class="cursor-dot"></div>
+
     <footer>
-      © 2026 Sachin Gupta • Flutter & Android Developer
+      © 2026 Sachin Gupta • Flutter &amp; Android Developer
     </footer>
+
+
+    <button id="backTop">↑</button>
 
     <script>
 
@@ -2267,6 +2644,71 @@ Flutter Android Developer India
 
       });
 
+
+      window.addEventListener("scroll", () => {
+
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+        const scrolled = (scrollTop / scrollHeight) * 100;
+
+        document.getElementById("scrollProgress").style.width = scrolled + "%";
+
+      });
+
+
+      const backTop = document.getElementById("backTop");
+
+      window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 400) {
+          backTop.style.display = "block";
+        } else {
+          backTop.style.display = "none";
+        }
+
+      });
+
+      backTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+
+
+
+      const cursor = document.querySelector(".cursor-dot");
+
+      if (window.matchMedia("(hover: hover)").matches) {
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        let posX = 0;
+        let posY = 0;
+
+        const speed = 0.15; // smoothness
+
+        document.addEventListener("mousemove", (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+
+        function animate() {
+
+          posX += (mouseX - posX) * speed;
+          posY += (mouseY - posY) * speed;
+
+          cursor.style.left = posX + "px";
+          cursor.style.top = posY + "px";
+
+          requestAnimationFrame(animate);
+        }
+
+        animate();
+
+      } else {
+
+        cursor.style.display = "none";
+
+      }
     </script>
 
 </body>
