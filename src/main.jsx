@@ -12,9 +12,9 @@ import './styles.css'
 const resumeUrl = './Sachin_Gupta_Resume.pdf'
 
 const links = {
-  linkedin: 'https://www.linkedin.com/',
+  linkedin: 'https://www.linkedin.com/in/sachindzz/',
   github: 'https://github.com/sachinguptadz',
-  instagram: 'https://www.instagram.com/',
+  instagram: 'https://www.instagram.com/sachindzz/',
   whatsapp: 'https://wa.me/917071878792',
   email: 'mailto:sachinguptadz@gmail.com'
 }
